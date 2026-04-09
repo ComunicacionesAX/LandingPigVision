@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de configuración PigVision</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#9bccf7",
+                        "surface-container-highest": "#dfe3e4",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e5e9ea",
+                        "on-tertiary-container": "#80dde8",
+                        "on-tertiary-fixed": "#001f23",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "primary-container": "#275c82",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#dfe3e4",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f6fafb",
+                        "background": "#f6fafb",
+                        "on-secondary-fixed-variant": "#3b417d",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c1c7cf",
+                        "on-secondary-fixed": "#0d1350",
+                        "inverse-on-surface": "#edf1f2",
+                        "surface-container": "#eaeef0",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#41474e",
+                        "inverse-primary": "#9bccf7",
+                        "tertiary-fixed": "#94f1fc",
+                        "surface-container-low": "#f0f4f5",
+                        "tertiary-container": "#00626a",
+                        "inverse-surface": "#2c3132",
+                        "secondary-container": "#b3b9fe",
+                        "secondary": "#535997",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#181c1d",
+                        "tertiary": "#00484f",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#2f6389",
+                        "outline": "#72787f",
+                        "primary-fixed": "#cce5ff",
+                        "on-secondary-container": "#414884",
+                        "on-background": "#181c1d",
+                        "primary": "#014469",
+                        "surface": "#f6fafb",
+                        "surface-dim": "#d6dbdc",
+                        "on-primary-fixed-variant": "#0e4b70",
+                        "on-primary-container": "#a3d4ff",
+                        "tertiary-fixed-dim": "#77d5df",
+                        "secondary-fixed": "#e0e0ff",
+                        "on-tertiary-fixed-variant": "#004f55",
+                        "on-primary-fixed": "#001e31"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6fafb;
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+    <!-- Header -->
+    <header class="bg-surface fixed top-0 w-full z-50 border-b border-outline-variant/20">
+        <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">settings</span>
+                <h1 class="text-lg font-bold text-primary tracking-tight">Guía de configuración</h1>
+            </div>
+            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX%20-%20Asimetrix/AX_Logo%20completo.png?width=174&height=56&name=AX_Logo%20completo.png" alt="Asimetrix" class="h-8">
+        </div>
+    </header>
+
+    <main class="pt-24 pb-24 md:pb-12 max-w-7xl mx-auto px-6">
+        <a href="index.html" class="inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors mb-6">
+            <span class="material-symbols-outlined">arrow_back</span>
+            <span class="font-medium">Volver a Instalación</span>
+        </a>
+
+        <!-- Hero Section -->
+        <section class="mb-8">
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white text-sm font-bold tracking-widest uppercase rounded-lg shadow-lg shadow-primary/30 mb-4">
+                        <span class="material-symbols-outlined text-lg">visibility</span>
+                        PigVision
+                    </span>
+                    <p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed mb-4">
+                        Para este proceso, te recomendamos tener disponible la siguiente información:
+                    </p>
+                    <ul class="text-on-surface-variant text-base space-y-2 list-disc list-inside mb-4">
+                        <li>Distancia entre el piso y el lente de PigVision</li>
+                        <li>Datos del lote (fecha de inicio, edad inicial, ID de lote, sexo, número inicial de animales)</li>
+                    </ul>
+                </div>
+                <div class="w-full lg:w-1/4">
+                    <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_PV_marr.png?width=400&height=400&name=AX_PV_marr.png" alt="PigVision" class="w-full rounded-xl shadow-lg bg-surface-container-high">
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 1: WiFi Configuration -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                <span class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-lg font-black">1</span>
+                Configura la PigVision a tu WiFi
+            </h2>
+
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">power_settings_new</span>
+                                <div>
+                                    <h3 class="font-bold text-on-surface mb-2">1. Conecta la PigVision a la corriente</h3>
+                                    <p class="text-on-surface-variant text-sm">Presiona el botón negro de <strong>ENCENDIDO</strong>. Notarás que el LED ON ilumina de color verde.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hubfs/AX_configuration_1-37.png" alt="Conexión PigVision" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+                                <div>
+                                    <h3 class="font-bold text-on-surface mb-2">2. Espera unos minutos</h3>
+                                    <p class="text-on-surface-variant text-sm">Hasta que el LED STATUS parpadee de color verde.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hubfs/AX_configuration_1-38.png" alt="LED verde parpadeando" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">restart_alt</span>
+                                <div>
+                                    <h3 class="font-bold text-on-surface mb-2">3. Presiona el botón de REINICIO</h3>
+                                    <p class="text-on-surface-variant text-sm">Hasta que el LED parpadee en rojo y escuches tres "pitidos". Esto tomará aproximadamente <strong>7 segundos</strong>.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hubfs/AX_configuration_1-39.png" alt="Botón de reinicio" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-tertiary text-2xl">check_circle</span>
+                                <div>
+                                    <h3 class="font-bold text-on-surface mb-2">4. PigVision está listo para configurar</h3>
+                                    <p class="text-on-surface-variant text-sm">La PigVision ahora está lista para configurar su conexión a la red.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-24 md:w-28 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_PigVision4.jpg?width=200&height=341&name=AX_PigVision4.jpg" alt="PigVision lista" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex items-start gap-4">
+                        <span class="material-symbols-outlined text-primary text-2xl">wifi</span>
+                        <div>
+                            <h3 class="font-bold text-on-surface mb-2">5. Conéctate a la red WiFi de PigVision</h3>
+                            <p class="text-on-surface-variant text-sm mb-3">Busca las redes Wi-Fi en tu teléfono móvil, tableta o PC y conéctate a la red que tiene el número de serie de la PigVision: <code class="bg-surface-container-high px-2 py-1 rounded text-sm">pv-serial...</code></p>
+                            <div class="bg-secondary-container/20 border border-secondary-container/30 p-4 rounded-lg">
+                                <p class="text-sm text-secondary font-semibold mb-1">Contraseña de la red:</p>
+                                <p class="text-lg font-bold text-secondary tracking-wider">asimetrix</p>
+                                <p class="text-xs text-on-surface-variant mt-1">Verifica que la contraseña esté en minúscula y sin espacios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">browser_updated</span>
+                                <div>
+                                    <h3 class="font-bold text-on-surface mb-2">6. Abre el navegador</h3>
+                                    <p class="text-on-surface-variant text-sm mb-3">Abre Google Chrome y escribe en la barra de búsqueda:</p>
+                                    <p class="text-xl font-bold text-primary tracking-wider">192.168.4.1</p>
+                                    <p class="text-xs text-on-surface-variant mt-2">Luego presiona Enter.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_configurationApp-40.png?width=397&height=200&name=AX_configurationApp-40.png" alt="Navegador" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">login</span>
+                                <div>
+                                    <h3 class="font-bold text-on-surface mb-2">7. Página de Inicio de PigVision</h3>
+                                    <p class="text-on-surface-variant text-sm">Verás la página de inicio. Haz clic en <strong>Iniciar</strong>.</p>
+                                    <p class="text-xs text-tertiary mt-2">Verifica en la esquina inferior derecha el número de serie de la PigVision.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_configurationApp-41-41.png?width=397&height=200&name=AX_configurationApp-41-41.png" alt="Página de inicio" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-primary text-2xl">wifi_find</span>
+                                <div>
+                                    <h3 class="font-bold text-on-surface mb-2">8. Selecciona tu red WiFi</h3>
+                                    <p class="text-on-surface-variant text-sm mb-3">En la lista desplegable, selecciona la red a la que te quieres conectar o selecciona "enter manually".</p>
+                                    <p class="text-sm text-tertiary">Llena la información de tu red (Nombre y Contraseña) y selecciona <strong>Conectar</strong>.</p>
+                                    <div class="bg-error-container/30 border border-error-container/50 p-3 rounded-lg mt-3">
+                                        <p class="text-xs text-error font-semibold">⚠️ Verifica que el nombre de la red y la contraseña hayan quedado escritas correctamente.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_configurationApp-41-42.png?width=397&height=200&name=AX_configurationApp-41-42.png" alt="Configuración WiFi" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 2: Lot Configuration -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                <span class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-lg font-black">2</span>
+                Configura PigVision para tu primer lote
+            </h2>
+
+            <div class="bg-surface-container-low p-6 rounded-xl mb-6">
+                <p class="text-on-surface-variant text-sm">
+                    Si es la primera vez que realizas este proceso, comunícate con tu contacto en Asimetrix, quien te guiará en los siguientes pasos.
+                </p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-secondary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary text-2xl">wifi</span>
+                                <div>
+                                    <h3 class="font-bold text-on-surface mb-2">1. Conéctate a la red WiFi</h3>
+                                    <p class="text-on-surface-variant text-sm">Conéctate a la misma red WiFi que se configuró en la fase anterior.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-24 md:w-28 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_FARMWIFI.jpg?width=200&height=335&name=AX_FARMWIFI.jpg" alt="WiFi granja" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-secondary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary text-2xl">link</span>
+                                <div>
+                                    <h3 class="font-bold text-on-surface mb-2">2. Ingresa la dirección</h3>
+                                    <p class="text-on-surface-variant text-sm">Tu contacto de Asimetrix te dirá la dirección que debes poner en tu navegador para completar la configuración.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_PigVisionUserGuide.png?width=397&height=234&name=AX_PigVisionUserGuide.png" alt="Dirección PigVision" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-secondary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary text-2xl">person</span>
+                                <div>
+                                    <h3 class="font-bold text-on-surface mb-2">3. Inicia sesión</h3>
+                                    <p class="text-on-surface-variant text-sm">Inicia sesión con tus credenciales de Asimetrix (las que usas para acceder a la aplicación web).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-24 md:w-28 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/login_pigvision.png?width=300&height=301&name=login_pigvision.png" alt="Login PigVision" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-secondary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <div class="flex items-start gap-4">
+                                <span class="material-symbols-outlined text-secondary text-2xl">edit_note</span>
+                                <div>
+                                    <h3 class="font-bold text-on-surface mb-2">4. Completa el formulario</h3>
+                                    <p class="text-on-surface-variant text-sm mb-4">Recuerda el significado de estos campos:</p>
+                                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                                        <div class="bg-surface-container-low p-3 rounded-lg">
+                                            <span class="material-symbols-outlined text-primary text-xl">height</span>
+                                            <p class="text-xs font-semibold mt-1">Altura de Cámara</p>
+                                        </div>
+                                        <div class="bg-surface-container-low p-3 rounded-lg">
+                                            <span class="material-symbols-outlined text-primary text-xl">calendar_month</span>
+                                            <p class="text-xs font-semibold mt-1">Fecha de Inicio</p>
+                                        </div>
+                                        <div class="bg-surface-container-low p-3 rounded-lg">
+                                            <span class="material-symbols-outlined text-primary text-xl">cake</span>
+                                            <p class="text-xs font-semibold mt-1">Edad Inicial</p>
+                                        </div>
+                                        <div class="bg-surface-container-low p-3 rounded-lg">
+                                            <span class="material-symbols-outlined text-primary text-xl">tag</span>
+                                            <p class="text-xs font-semibold mt-1">ID de Lote</p>
+                                        </div>
+                                        <div class="bg-surface-container-low p-3 rounded-lg">
+                                            <span class="material-symbols-outlined text-primary text-xl">female</span>
+                                            <p class="text-xs font-semibold mt-1">Sexo</p>
+                                        </div>
+                                        <div class="bg-surface-container-low p-3 rounded-lg">
+                                            <span class="material-symbols-outlined text-primary text-xl">pin</span>
+                                            <p class="text-xs font-semibold mt-1">N° Animales</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/Captura%20de%20pantalla%202024-07-10%20a%20la(s)%2011.56.57%20a.%20m..png?width=397&height=324&name=Captura%20de%20pantalla%202024-07-10%20a%20la(s)%2011.56.57%20a.%20m..png" alt="Formulario PigVision" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 bg-tertiary-container/20 border border-tertiary-container/30 p-6 rounded-xl text-center">
+                <p class="text-tertiary font-semibold mb-2">Después de completar toda la información, haz clic en Configurar.</p>
+                <p class="text-on-surface-variant text-sm">Tu PigVision ahora está lista para pesar a los cerdos y puedes ver todas tus cámaras en la aplicación web.</p>
+                <a href="https://asimetrix.co/es/" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-container transition-colors mt-4">
+                    <span class="material-symbols-outlined">open_in_new</span>
+                    Ir a la aplicación web
+                </a>
+            </div>
+        </section>
+
+        <!-- Troubleshooting -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-secondary mb-6 flex items-center gap-3">
+                <span class="material-symbols-outlined text-secondary text-3xl">warning</span>
+                Solución de problemas
+            </h2>
+
+            <div class="bg-secondary-container/20 border border-secondary-container/30 p-6 rounded-xl">
+                <p class="text-on-surface-variant text-sm mb-4">
+                    Si los LED no funcionan correctamente, apaga la cámara, desconéctala durante <strong>5 minutos</strong> y vuelve a conectarla. Después, inicia nuevamente el proceso de configuración desde el paso 1.
+                </p>
+                <div class="bg-error-container/30 border border-error-container/50 p-3 rounded-lg mb-4">
+                    <p class="text-xs text-error font-semibold">⚠️ Importante: El apagado y la desconexión por 5 minutos son indispensables. Si no realizas este procedimiento, la cámara no funcionará correctamente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="bg-surface-container-low rounded-xl p-8 md:p-12">
+            <h4 class="text-primary text-2xl font-bold mb-6 text-center">¿Necesitas ayuda?</h4>
+            <p class="text-on-surface-variant text-center mb-8">Contacta a nuestro equipo de soporte</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-surface-container-lowest p-5 rounded-xl text-center">
+                    <div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="material-symbols-outlined text-2xl text-white">person</span>
+                    </div>
+                    <h5 class="font-bold text-on-surface mb-1">Damian García</h5>
+                    <p class="text-sm text-primary font-semibold">+57 311 2078988</p>
+                </div>
+                <div class="bg-surface-container-lowest p-5 rounded-xl text-center">
+                    <div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="material-symbols-outlined text-2xl text-white">person</span>
+                    </div>
+                    <h5 class="font-bold text-on-surface mb-1">Manuela Chavarría</h5>
+                    <p class="text-sm text-primary font-semibold">+57 318 2202707</p>
+                </div>
+                <div class="bg-surface-container-lowest p-5 rounded-xl text-center">
+                    <div class="w-12 h-12 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="material-symbols-outlined text-2xl text-white">person</span>
+                    </div>
+                    <h5 class="font-bold text-on-surface mb-1">Natali Lora</h5>
+                    <p class="text-sm text-primary font-semibold">+57 313 5033070</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Step CTA -->
+        <section class="mt-12 bg-surface-container-low rounded-xl p-8 text-center">
+            <h4 class="text-primary text-2xl font-bold mb-4">¿Configuración completa?</h4>
+            <p class="text-on-surface-variant mb-6">Aprende cómo hacer el mantenimiento de tu PigVision</p>
+            <a href="mantenimiento.html" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-container transition-colors">
+                <span class="material-symbols-outlined">build</span>
+                Ir a Mantenimiento
+            </a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-primary">sensors</span>
+                <span class="font-bold text-primary">PigVision</span>
+            </div>
+            <p class="text-on-surface-variant text-sm">© 2026 Asimetrix - Monitoreo inteligente para tu producción</p>
+        </div>
+    </footer>
+
+    <!-- Bottom Nav (Mobile) -->
+    <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface border-t border-outline-variant/20 shadow-[0_-4px_32px_rgba(24,28,29,0.04)] md:hidden">
+        <button class="flex flex-col items-center justify-center text-primary px-4 py-1">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+            <span class="font-Inter text-[11px] uppercase tracking-widest mt-0.5">Guía</span>
+        </button>
+    </nav>
+</body>
+</html>

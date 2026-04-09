@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de instalación PigVision</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#9bccf7",
+                        "surface-container-highest": "#dfe3e4",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e5e9ea",
+                        "on-tertiary-container": "#80dde8",
+                        "on-tertiary-fixed": "#001f23",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "primary-container": "#275c82",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#dfe3e4",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f6fafb",
+                        "background": "#f6fafb",
+                        "on-secondary-fixed-variant": "#3b417d",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c1c7cf",
+                        "on-secondary-fixed": "#0d1350",
+                        "inverse-on-surface": "#edf1f2",
+                        "surface-container": "#eaeef0",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#41474e",
+                        "inverse-primary": "#9bccf7",
+                        "tertiary-fixed": "#94f1fc",
+                        "surface-container-low": "#f0f4f5",
+                        "tertiary-container": "#00626a",
+                        "inverse-surface": "#2c3132",
+                        "secondary-container": "#b3b9fe",
+                        "secondary": "#535997",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#181c1d",
+                        "tertiary": "#00484f",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#2f6389",
+                        "outline": "#72787f",
+                        "primary-fixed": "#cce5ff",
+                        "on-secondary-container": "#414884",
+                        "on-background": "#181c1d",
+                        "primary": "#014469",
+                        "surface": "#f6fafb",
+                        "surface-dim": "#d6dbdc",
+                        "on-primary-fixed-variant": "#0e4b70",
+                        "on-primary-container": "#a3d4ff",
+                        "tertiary-fixed-dim": "#77d5df",
+                        "secondary-fixed": "#e0e0ff",
+                        "on-tertiary-fixed-variant": "#004f55",
+                        "on-primary-fixed": "#001e31"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6fafb;
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+    <!-- Header -->
+    <header class="bg-surface fixed top-0 w-full z-50 border-b border-outline-variant/20">
+        <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">build</span>
+                <h1 class="text-lg font-bold text-primary tracking-tight">Guía de instalación</h1>
+            </div>
+            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX%20-%20Asimetrix/AX_Logo%20completo.png?width=174&height=56&name=AX_Logo%20completo.png" alt="Asimetrix" class="h-8">
+        </div>
+    </header>
+
+    <main class="pt-24 pb-24 md:pb-12 max-w-7xl mx-auto px-6">
+        <a href="index.html" class="inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors mb-6">
+            <span class="material-symbols-outlined">arrow_back</span>
+            <span class="font-medium">Volver al inicio</span>
+        </a>
+
+        <!-- Hero Section -->
+        <section class="mb-12">
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white text-sm font-bold tracking-widest uppercase rounded-lg shadow-lg shadow-primary/30 mb-4">
+                        <span class="material-symbols-outlined text-lg">visibility</span>
+                        PigVision
+                    </span>
+                    <h2 class="text-3xl font-bold text-on-surface mb-4">Instalación</h2>
+                    <p class="text-on-surface-variant text-lg mb-4">
+                        Aprende a instalar tu PigVision siguiendo los pasos a continuación.
+                    </p>
+                    <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/figurasInstalacion-22.png?width=600&height=300&name=figurasInstalacion-22.png" alt="Diagrama de instalación" class="w-full max-w-md rounded-xl shadow-lg mx-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- Important Note -->
+        <section class="mb-12 bg-tertiary-container/20 border border-tertiary-container/30 p-6 rounded-xl">
+            <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-tertiary text-2xl">info</span>
+                <div>
+                    <h4 class="font-bold text-tertiary mb-2">Para tener en cuenta</h4>
+                    <ul class="text-sm text-on-surface-variant space-y-1">
+                        <li>• Debes instalar la PigVision al menos a <strong>1 metro | 3.28 pies</strong> de distancia del comedero.</li>
+                        <li>• Registra la distancia entre el suelo y el lente.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ceiling Type 1: > 2.50m -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                <span class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center text-lg font-black">1</span>
+                Instalación para techos con altura mayor a 2.50 m | 8.2 ft
+            </h3>
+
+            <div class="space-y-8">
+                <!-- Step 1 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">1. Mide la altura del techo al suelo</h4>
+                            <p class="text-on-surface-variant text-sm">Registra esta medida para referencia futura.</p>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/figurasInstalacion-23.png?width=300&height=387&name=figurasInstalacion-23.png" alt="Medir altura" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Components -->
+                <div class="bg-surface-container-low p-6 rounded-xl">
+                    <h5 class="font-bold text-xs text-on-surface-variant uppercase tracking-widest mb-4">Componentes necesarios</h5>
+                    <div class="grid grid-cols-3 md:grid-cols-3 gap-4">
+                        <div class="bg-surface-container-lowest p-3 rounded-lg text-center">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Partes-06.png?width=100&height=70&name=AX_Partes-06.png" alt="Acoples bracket" class="w-24 mx-auto rounded-lg mb-2">
+                            <p class="text-xs font-semibold text-on-surface">Acoples bracket</p>
+                        </div>
+                        <div class="bg-surface-container-lowest p-3 rounded-lg text-center">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Partes-09.png?width=100&height=70&name=AX_Partes-09.png" alt="Tornillos ensamble" class="w-24 mx-auto rounded-lg mb-2">
+                            <p class="text-xs font-semibold text-on-surface">Tornillos ensamble</p>
+                        </div>
+                        <div class="bg-surface-container-lowest p-3 rounded-lg text-center">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Adicionales-19.png?width=100&height=70&name=AX_Adicionales-19.png" alt="Tubo EMT" class="w-24 mx-auto rounded-lg mb-2">
+                            <p class="text-xs font-semibold text-on-surface">Tubo EMT ½ de 35 cm</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2-3 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <h4 class="font-bold text-on-surface mb-2">2. Corta el tubo EMT ½ de 20 cm | 0.65 ft</h4>
+                </div>
+
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">3. Une los acoples bracket al tubo EMT por ambos extremos y fija a cada uno con 2 tornillos autoperforantes</h4>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_numeral4.png?width=368&height=200&name=AX_Installation_numeral4.png" alt="Acoples unidos" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Components 2 -->
+                <div class="bg-surface-container-low p-6 rounded-xl">
+                    <h5 class="font-bold text-xs text-on-surface-variant uppercase tracking-widest mb-4">Componentes necesarios</h5>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-surface-container-lowest p-2 rounded-lg text-center">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Partes-03.png?width=80&height=60&name=AX_Partes-03.png" alt="Soporte superior" class="w-20 mx-auto rounded-lg mb-2">
+                            <p class="text-xs font-semibold text-on-surface">Soporte superior</p>
+                        </div>
+                        <div class="bg-surface-container-lowest p-2 rounded-lg text-center">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Partes-04.png?width=80&height=60&name=AX_Partes-04.png" alt="Rótula" class="w-20 mx-auto rounded-lg mb-2">
+                            <p class="text-xs font-semibold text-on-surface">Rótula</p>
+                        </div>
+                        <div class="bg-surface-container-lowest p-2 rounded-lg text-center">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Partes-08.png?width=80&height=60&name=AX_Partes-08.png" alt="Tornillo soporte" class="w-20 mx-auto rounded-lg mb-2">
+                            <p class="text-xs font-semibold text-on-surface">Tornillo soporte</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">4. Acopla al soporte superior la rótula con ayuda del tornillo</h4>
+                            <p class="text-on-surface-variant text-sm">Asegúrate que la rótula quede firme y apretada al soporte.</p>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_numeral-4.png?width=368&height=200&name=AX_Installation_numeral-4.png" alt="Acoplar rótula" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">5. Une el soporte superior con el tubo EMT</h4>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_numeral678-26.png?width=368&height=200&name=AX_Installation_numeral678-26.png" alt="Unir soporte" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">6. Verifica la superficie del corral</h4>
+                            <p class="text-on-surface-variant text-sm">Verifica que en los corrales en los que se va a instalar PigVision se encuentre la superficie adecuada para pegar los tornillos que sostendrán la PigVision al techo y que la conexión eléctrica esté cerca (máximo 1,8 m).</p>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_numeral678-27.png?width=368&height=200&name=AX_Installation_numeral678-27.png" alt="Verificar corral" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">7. Fija el soporte superior con los 4 tornillos de ensamble</h4>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_numeral678-28.png?width=368&height=200&name=AX_Installation_numeral678-28.png" alt="Fijar soporte" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">8. Enrosca la PigVision al tubo EMT</h4>
+                            <p class="text-on-surface-variant text-sm">Verifica que la rótula (2) y la rosca (1) redonda de la PigVision estén apretadas y procede a roscar la PigVision al tubo EMT.</p>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_numeral9.png?width=300&height=387&name=AX_Installation_numeral9.png" alt="Enroscar PigVision" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 9 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">9. Conecta la energía</h4>
+                            <p class="text-on-surface-variant text-sm">Conecta la PigVision a la energía y enciéndela del botón ON.</p>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_numeral9on.png?width=368&height=200&name=AX_Installation_numeral9on.png" alt="Encender PigVision" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ceiling Type 2: < 2.30m -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-secondary mb-6 flex items-center gap-3">
+                <span class="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center text-lg font-black">2</span>
+                Instalación para techos con altura menor a 2.30 m | 7.5 ft
+            </h3>
+
+            <div class="space-y-8">
+                <!-- Step 1 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-secondary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">1. Fija la tuerca al soporte superior</h4>
+                            <p class="text-on-surface-variant text-sm">Fija la tuerca al soporte superior en su parte interna con silicona o con pega.</p>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_TECHO2-31.png?width=368&height=200&name=AX_Installation_TECHO2-31.png" alt="Fijar tuerca" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-secondary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">2. Quita la rosca redonda de la rótula</h4>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_TECHO2-32.png?width=368&height=200&name=AX_Installation_TECHO2-32.png" alt="Quitar rosca" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-secondary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">3. Enrosca la rótula sin la rosca redonda a la PigVision</h4>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_TECHO2-33.png?width=368&height=200&name=AX_Installation_TECHO2-33.png" alt="Enroscar rótula" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-secondary-container p-6">
+                    <h4 class="font-bold text-on-surface mb-2">4. Verifica la superficie del corral</h4>
+                    <p class="text-on-surface-variant text-sm">Verifica que en los corrales en los que se va a instalar PigVision se encuentre la superficie adecuada para pegar los tornillos que sostendrán la PigVision al techo y que la conexión eléctrica esté cerca (máximo 1,8 m).</p>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-secondary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">5. Fija el soporte superior con los 4 tornillos de ensamble</h4>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_TECHO2-34.png?width=368&height=200&name=AX_Installation_TECHO2-34.png" alt="Fijar soporte" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-secondary-container p-6">
+                    <div class="flex flex-col md:flex-row gap-6">
+                        <div class="flex-1">
+                            <h4 class="font-bold text-on-surface mb-2">6. Enrosca la PigVision y conecta la energía</h4>
+                            <p class="text-on-surface-variant text-sm">Enrosca la PigVision en el soporte superior ya fijado. Conéctala a la energía y enciéndela del botón ON.</p>
+                        </div>
+                        <div class="w-32 md:w-40 flex-shrink-0">
+                            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_Installation_TECHO2-35.png?width=368&height=200&name=AX_Installation_TECHO2-35.png" alt="Conectar energía" class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Step CTA -->
+        <section class="bg-surface-container-low rounded-xl p-8 text-center">
+            <h4 class="text-primary text-2xl font-bold mb-4">¿Instalación completa?</h4>
+            <p class="text-on-surface-variant mb-6">Ahora aprende a configurar tu PigVision</p>
+            <a href="configuracion.html" class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-container transition-colors">
+                <span class="material-symbols-outlined">settings</span>
+                Ir a Configuración
+            </a>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="bg-surface-container-low rounded-xl p-8 md:p-12 mt-12">
+            <h4 class="text-primary text-2xl font-bold mb-6 text-center">¿Necesitas ayuda?</h4>
+            <p class="text-on-surface-variant text-center mb-8">Contacta a nuestro equipo de soporte</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div class="bg-surface-container-lowest p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-3xl text-white">person</span>
+                    </div>
+                    <h5 class="font-bold text-lg text-on-surface mb-2">Damian García</h5>
+                    <p class="text-sm text-on-surface-variant mb-1">damian.garcia@asimetrix.co</p>
+                    <p class="text-sm text-primary font-semibold">+57 311 2078988</p>
+                </div>
+                <div class="bg-surface-container-lowest p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-3xl text-white">person</span>
+                    </div>
+                    <h5 class="font-bold text-lg text-on-surface mb-2">Manuela Chavarría</h5>
+                    <p class="text-sm text-on-surface-variant mb-1">manuela.chavarria@asimetrix.co</p>
+                    <p class="text-sm text-primary font-semibold">+57 318 2202707</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-primary">sensors</span>
+                <span class="font-bold text-primary">PigVision</span>
+            </div>
+            <p class="text-on-surface-variant text-sm">© 2026 Asimetrix - Monitoreo inteligente para tu producción</p>
+        </div>
+    </footer>
+
+    <!-- Bottom Nav (Mobile) -->
+    <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface border-t border-outline-variant/20 shadow-[0_-4px_32px_rgba(24,28,29,0.04)] md:hidden">
+        <button class="flex flex-col items-center justify-center text-primary px-4 py-1">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+            <span class="font-Inter text-[11px] uppercase tracking-widest mt-0.5">Guía</span>
+        </button>
+    </nav>
+</body>
+</html>

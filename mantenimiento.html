@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de mantenimiento PigVision</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed-dim": "#9bccf7",
+                        "surface-container-highest": "#dfe3e4",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e5e9ea",
+                        "on-tertiary-container": "#80dde8",
+                        "on-tertiary-fixed": "#001f23",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#bdc2ff",
+                        "primary-container": "#275c82",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#dfe3e4",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f6fafb",
+                        "background": "#f6fafb",
+                        "on-secondary-fixed-variant": "#3b417d",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#c1c7cf",
+                        "on-secondary-fixed": "#0d1350",
+                        "inverse-on-surface": "#edf1f2",
+                        "surface-container": "#eaeef0",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#41474e",
+                        "inverse-primary": "#9bccf7",
+                        "tertiary-fixed": "#94f1fc",
+                        "surface-container-low": "#f0f4f5",
+                        "tertiary-container": "#00626a",
+                        "inverse-surface": "#2c3132",
+                        "secondary-container": "#b3b9fe",
+                        "secondary": "#535997",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#181c1d",
+                        "tertiary": "#00484f",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#2f6389",
+                        "outline": "#72787f",
+                        "primary-fixed": "#cce5ff",
+                        "on-secondary-container": "#414884",
+                        "on-background": "#181c1d",
+                        "primary": "#014469",
+                        "surface": "#f6fafb",
+                        "surface-dim": "#d6dbdc",
+                        "on-primary-fixed-variant": "#0e4b70",
+                        "on-primary-container": "#a3d4ff",
+                        "tertiary-fixed-dim": "#77d5df",
+                        "secondary-fixed": "#e0e0ff",
+                        "on-tertiary-fixed-variant": "#004f55",
+                        "on-primary-fixed": "#001e31"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f6fafb;
+            min-height: 100dvh;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+    <!-- Header -->
+    <header class="bg-surface fixed top-0 w-full z-50 border-b border-outline-variant/20">
+        <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">handyman</span>
+                <h1 class="text-lg font-bold text-primary tracking-tight">Guía de mantenimiento</h1>
+            </div>
+            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX%20-%20Asimetrix/AX_Logo%20completo.png?width=174&height=56&name=AX_Logo%20completo.png" alt="Asimetrix" class="h-8">
+        </div>
+    </header>
+
+    <main class="pt-24 pb-24 md:pb-12 max-w-7xl mx-auto px-6">
+        <a href="index.html" class="inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors mb-6">
+            <span class="material-symbols-outlined">arrow_back</span>
+            <span class="font-medium">Volver al inicio</span>
+        </a>
+
+        <!-- Hero Section -->
+        <section class="mb-12">
+            <div class="flex flex-col lg:flex-row gap-8 items-center">
+                <div class="flex-1">
+                    <span class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white text-sm font-bold tracking-widest uppercase rounded-lg shadow-lg shadow-primary/30 mb-4">
+                        <span class="material-symbols-outlined text-lg">visibility</span>
+                        PigVision
+                    </span>
+                    <h2 class="text-3xl font-bold text-on-surface mb-4">Mantenimiento</h2>
+                    <p class="text-on-surface-variant text-lg">
+                        Aprende a mantener tu PigVision en óptimas condiciones siguiendo estas recomendaciones.
+                    </p>
+                </div>
+                <div class="w-32 lg:w-40">
+                    <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_maintenance-44-44.png?width=200&height=200&name=AX_maintenance-44-44.png" alt="Mantenimiento" class="w-full rounded-xl shadow-lg">
+                </div>
+            </div>
+        </section>
+
+        <!-- Cleaning Section -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                <span class="material-symbols-outlined text-3xl">cleaning_services</span>
+                Limpieza de dispositivos
+            </h3>
+            <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-primary-container p-6">
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="flex-1">
+                        <p class="text-on-surface-variant mb-4">El responsable de la granja debe limpiar cada uno según las indicaciones:</p>
+                        <ul class="text-on-surface-variant text-sm space-y-3">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                <span>Utiliza un paño húmedo y luego un paño seco para limpiar la lente o nuestro <strong>Stick de Limpieza de Visión</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                <span>Limpia <strong>cada 15 días</strong>.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+                                <span>Usa un cepillo para eliminar el polvo del disipador de calor (pieza metálica en la tapa superior de PigVision). Limpia <strong>cada lote</strong>.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-32 lg:w-40 flex-shrink-0">
+                        <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_maintenance-44-45.png?width=199&height=200&name=AX_maintenance-44-45.png" alt="Limpieza" class="w-full rounded-lg shadow-md">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Review Section -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-secondary mb-6 flex items-center gap-3">
+                <span class="material-symbols-outlined text-3xl">search</span>
+                Revisión del dispositivo
+            </h3>
+            <div class="bg-surface-container-lowest rounded-xl shadow-sm border-t-4 border-secondary-container p-6">
+                <div class="flex flex-col lg:flex-row gap-6">
+                    <div class="flex-1">
+                        <ul class="text-on-surface-variant text-sm space-y-3">
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+                                <span>Verifica que esté conectado a la fuente de alimentación.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-secondary text-lg">check_circle</span>
+                                <span>El LED de <strong>ENCENDIDO (ON)</strong> debe permanecer en <span class="inline-flex items-center px-2 py-0.5 rounded bg-yellow-400 text-yellow-800 text-xs font-bold">amarillo</span> y el LED de <strong>ESTADO (STATUS)</strong> debe permanecer en <span class="inline-flex items-center px-2 py-0.5 rounded bg-green-500 text-white text-xs font-bold">verde</span>.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="material-symbols-outlined text-error text-lg">warning</span>
+                                <span>Si el LED de <strong>ESTADO (STATUS)</strong> permanece en <span class="inline-flex items-center px-2 py-0.5 rounded bg-red-500 text-white text-xs font-bold">rojo</span>, contacta a un asesor.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-32 lg:w-40 flex-shrink-0">
+                        <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX_maintenance-44-46.png?width=199&height=199&name=AX_maintenance-44-46.png" alt="Revisión" class="w-full rounded-lg shadow-md">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Suggestions -->
+        <section class="mb-12">
+            <h3 class="text-2xl font-bold text-tertiary mb-6 flex items-center gap-3">
+                <span class="material-symbols-outlined text-3xl">lightbulb</span>
+                Sugerencias clave
+            </h3>
+            <div class="bg-tertiary-container/10 border border-tertiary-container/30 rounded-xl p-6">
+                <ul class="text-on-surface-variant text-sm space-y-3">
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-tertiary text-lg">stars</span>
+                        <span>Siempre realiza los pasos anteriores <strong>5 días antes de la llegada del nuevo lote</strong>.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-tertiary text-lg">warning</span>
+                        <span>Los dispositivos <strong>no deben colgarse de la línea de gas</strong> ni golpearse con superficies duras.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-tertiary text-lg">electrical_services</span>
+                        <span><strong>No se debe conectar ningún otro equipo</strong> a los enchufes del dispositivo Smart Farm.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="material-symbols-outlined text-tertiary text-lg">water_drop</span>
+                        <span>El dispositivo <strong>no debe recibir agua directamente</strong>.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="bg-surface-container-low rounded-xl p-8 md:p-12">
+            <h4 class="text-primary text-2xl font-bold mb-6 text-center">Contáctanos</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+                <div class="bg-surface-container-lowest p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-3xl text-white">person</span>
+                    </div>
+                    <h5 class="font-bold text-lg text-on-surface mb-2">Damián García</h5>
+                    <p class="text-sm text-on-surface-variant mb-1">damian.garcia@asimetrix.co</p>
+                    <p class="text-sm text-primary font-semibold">+57 (304) 666 0685</p>
+                </div>
+                <div class="bg-surface-container-lowest p-6 rounded-xl text-center">
+                    <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="material-symbols-outlined text-3xl text-white">person</span>
+                    </div>
+                    <h5 class="font-bold text-lg text-on-surface mb-2">Manuela Chavarría</h5>
+                    <p class="text-sm text-on-surface-variant mb-1">manuela.chavarria@asimetrix.co</p>
+                    <p class="text-sm text-primary font-semibold">+57 (318) 220 2707</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-container-low py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <span class="material-symbols-outlined text-primary">sensors</span>
+                <span class="font-bold text-primary">PigVision</span>
+            </div>
+            <p class="text-on-surface-variant text-sm">© 2026 Asimetrix - Monitoreo inteligente para tu producción</p>
+        </div>
+    </footer>
+
+    <!-- Bottom Nav (Mobile) -->
+    <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 pt-2 bg-surface border-t border-outline-variant/20 shadow-[0_-4px_32px_rgba(24,28,29,0.04)] md:hidden">
+        <button class="flex flex-col items-center justify-center text-primary px-4 py-1">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+            <span class="font-Inter text-[11px] uppercase tracking-widest mt-0.5">Guía</span>
+        </button>
+    </nav>
+</body>
+</html>
