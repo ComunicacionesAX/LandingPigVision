@@ -118,6 +118,49 @@
                     <p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed mb-2">
                         Aprende a instalar y configurar tu PigVision.
                     </p>
+
+                    <!-- Important Section -->
+                    <section class="mb-6 bg-error-container/20 border border-error-container/40 rounded-xl p-5">
+                        <div class="flex items-start gap-3">
+                            <span class="material-symbols-outlined text-error text-2xl">warning</span>
+                            <div>
+                                <h4 class="font-bold text-error mb-3">Importante</h4>
+                                <p class="text-on-surface-variant text-sm mb-3">Antes de empezar este proceso, verifica con el área de tecnología que:</p>
+                                <p class="text-on-surface-variant text-sm mb-3">Para que PigVision funcione correctamente, los equipos necesitan tener acceso a internet sin restricciones que bloqueen su comunicación.</p>
+                                <p class="text-on-surface-variant text-sm mb-3">En redes donde existen políticas de seguridad (firewall), es necesario permitir ciertas conexiones para que el sistema pueda: comunicarse con la plataforma, sincronizar información y mantenerse actualizado. Si estas configuraciones no están habilitadas, el sistema puede presentar fallas de conexión o funcionamiento.</p>
+                                
+                                <h5 class="font-bold text-on-surface mb-2">Puertos requeridos</h5>
+                                <ul class="text-on-surface-variant text-sm space-y-1 mb-3">
+                                    <li><strong>443 TCP</strong> - Necesario para la conexión a la VPN, acceso al terminal web y servicios HTTPS.</li>
+                                    <li><strong>123 UDP</strong> - Utilizado para la sincronización de hora mediante NTP.</li>
+                                    <li><strong>53 UDP</strong> - Utilizado para la resolución de nombres de dominio (DNS).</li>
+                                </ul>
+                                <p class="text-xs text-on-surface-variant mb-3">Nota: Estos puertos deben estar habilitados para tráfico saliente (y permitir tráfico entrante únicamente como respuesta a conexiones iniciadas desde la red interna).</p>
+                                
+                                <h5 class="font-bold text-on-surface mb-2">Dominios que deben estar permitidos (whitelist)</h5>
+                                <div class="flex flex-wrap gap-2 mb-3">
+                                    <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">*.balena-cloud.com</span>
+                                    <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">*.docker.com</span>
+                                    <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">*.docker.io</span>
+                                    <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">*.asimetrix.co</span>
+                                </div>
+                                
+                                <h5 class="font-bold text-on-surface mb-2">Servidores de sincronización de tiempo (NTP – puerto 123 UDP)</h5>
+                                <div class="flex flex-wrap gap-2 mb-3">
+                                    <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">0.resinio.pool.ntp.org</span>
+                                    <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">1.resinio.pool.ntp.org</span>
+                                    <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">2.resinio.pool.ntp.org</span>
+                                    <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">3.resinio.pool.ntp.org</span>
+                                </div>
+                                
+                                <h5 class="font-bold text-on-surface mb-2">DNS</h5>
+                                <p class="text-on-surface-variant text-sm mb-1">Se utiliza por defecto el servidor DNS público de Google:</p>
+                                <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">8.8.8.8</span>
+                                <p class="text-xs text-on-surface-variant mt-1">(Adicional a los servidores DNS que tengan configurados internamente).</p>
+                            </div>
+                        </div>
+                    </section>
+
                     <p class="text-on-surface-variant text-base max-w-2xl leading-relaxed mb-2">
                         Hemos creado 2 versiones para ti, elige la versión que se ajuste a tu forma de aprendizaje:
                     </p>
