@@ -88,6 +88,122 @@
             background: linear-gradient(45deg, #014469, #275c82);
         }
     </style>
+    <script>
+        const translations = {
+            es: {
+                title: "Guía de instalación",
+                backToHub: "Volver al Hub",
+                badge: "PigVision",
+                learnText: "Aprende a instalar y configurar tu PigVision.",
+                versionsText: "Hemos creado 2 versiones para ti, elige la versión que se ajuste a tu forma de aprendizaje:",
+                option1: "Video, donde Jhony nos muestra el proceso",
+                watchVideo: "Ver video",
+                option2: "El siguiente paso a paso descriptivo. Da clic en cada uno",
+                components: "Componentes",
+                componentsDesc: "Conoce las partes y herramientas",
+                install: "Instalación",
+                installDesc: "Instala en tu granja",
+                config: "Configuración",
+                configDesc: "Configura WiFi y lote",
+                maintenance: "Mantenimiento",
+                maintenanceDesc: "Cuida tu PigVision",
+                needHelp: "¿Necesitas ayuda?",
+                contactSupport: "Contacta a nuestro equipo de soporte",
+                important: "Importante. Antes de iniciar, verifica estas condiciones con el área de tecnología",
+                importantSummary: "Los equipos necesitan tener acceso a internet sin restricciones que bloqueen su comunicación.",
+                expandInfo: "En redes donde existen políticas de seguridad (firewall), es necesario permitir ciertas conexiones para que el sistema pueda: comunicarse con la plataforma, sincronizar información y mantenerse actualizado. Si estas configuraciones no están habilitadas, el sistema puede presentar fallas de conexión o funcionamiento.",
+                ports: "Puertos requeridos",
+                port443: "443 TCP - Necesario para la conexión a la VPN, acceso al terminal web y servicios HTTPS.",
+                port123: "123 UDP - Utilizado para la sincronización de hora mediante NTP.",
+                port53: "53 UDP - Utilizado para la resolución de nombres de dominio (DNS).",
+                portNote: "Nota: Estos puertos deben estar habilitados para tráfico saliente (y permitir tráfico entrante únicamente como respuesta a conexiones iniciadas desde la red interna).",
+                whitelist: "Dominios que deben estar permitidos (whitelist)",
+                ntp: "Servidores de sincronización de tiempo (NTP – puerto 123 UDP)",
+                dns: "DNS",
+                dnsText: "Se utiliza por defecto el servidor DNS público de Google:",
+                dnsNote: "(Adicional a los servidores DNS que tengan configurados internamente)."
+            },
+            en: {
+                title: "Installation Guide",
+                backToHub: "Back to Hub",
+                badge: "PigVision",
+                learnText: "Learn to install and configure your PigVision.",
+                versionsText: "We have created 2 versions for you, choose the version that fits your learning style:",
+                option1: "Video, where Jhony shows us the process",
+                watchVideo: "Watch video",
+                option2: "The following step-by-step guide. Click on each one",
+                components: "Components",
+                componentsDesc: "Know the parts and tools",
+                install: "Installation",
+                installDesc: "Install on your farm",
+                config: "Configuration",
+                configDesc: "Configure WiFi and lot",
+                maintenance: "Maintenance",
+                maintenanceDesc: "Take care of your PigVision",
+                needHelp: "Need help?",
+                contactSupport: "Contact our support team",
+                important: "Important. Before starting, verify these conditions with the technology area",
+                importantSummary: "Equipment needs internet access without restrictions that block their communication.",
+                expandInfo: "In networks where security policies (firewall) exist, it is necessary to allow certain connections so the system can: communicate with the platform, synchronize information and stay updated. If these configurations are not enabled, the system may experience connection or operation failures.",
+                ports: "Required ports",
+                port443: "443 TCP - Required for VPN connection, web terminal access and HTTPS services.",
+                port123: "123 UDP - Used for time synchronization via NTP.",
+                port53: "53 UDP - Used for domain name resolution (DNS).",
+                portNote: "Note: These ports must be enabled for outbound traffic (and allow inbound traffic only as a response to connections initiated from the internal network).",
+                whitelist: "Domains that must be allowed (whitelist)",
+                ntp: "Time synchronization servers (NTP - port 123 UDP)",
+                dns: "DNS",
+                dnsText: "By default, the Google public DNS server is used:",
+                dnsNote: "(In addition to the DNS servers configured internally)."
+            }
+        };
+
+        let currentLang = 'es';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            updateContent();
+        }
+
+        function updateContent() {
+            const t = translations[currentLang];
+            
+            document.getElementById('lang-title').textContent = t.title;
+            document.getElementById('lang-back').textContent = t.backToHub;
+            document.getElementById('lang-learn').textContent = t.learnText;
+            document.getElementById('lang-versions').textContent = t.versionsText;
+            document.getElementById('lang-option1').textContent = t.option1;
+            document.getElementById('lang-watch').textContent = t.watchVideo;
+            document.getElementById('lang-option2').textContent = t.option2;
+            
+            document.getElementById('lang-components').textContent = t.components;
+            document.getElementById('lang-componentsDesc').textContent = t.componentsDesc;
+            document.getElementById('lang-install').textContent = t.install;
+            document.getElementById('lang-installDesc').textContent = t.installDesc;
+            document.getElementById('lang-config').textContent = t.config;
+            document.getElementById('lang-configDesc').textContent = t.configDesc;
+            document.getElementById('lang-maintenance').textContent = t.maintenance;
+            document.getElementById('lang-maintenanceDesc').textContent = t.maintenanceDesc;
+            document.getElementById('lang-needHelp').textContent = t.needHelp;
+            document.getElementById('lang-contactSupport').textContent = t.contactSupport;
+            
+            document.getElementById('lang-important').textContent = t.important;
+            document.getElementById('lang-importantSummary').textContent = t.importantSummary;
+            document.getElementById('lang-expandInfo').textContent = t.expandInfo;
+            document.getElementById('lang-ports').textContent = t.ports;
+            document.getElementById('lang-port443').textContent = t.port443;
+            document.getElementById('lang-port123').textContent = t.port123;
+            document.getElementById('lang-port53').textContent = t.port53;
+            document.getElementById('lang-portNote').textContent = t.portNote;
+            document.getElementById('lang-whitelist').textContent = t.whitelist;
+            document.getElementById('lang-ntp').textContent = t.ntp;
+            document.getElementById('lang-dns').textContent = t.dns;
+            document.getElementById('lang-dnsText').textContent = t.dnsText;
+            document.getElementById('lang-dnsNote').textContent = t.dnsNote;
+            
+            document.getElementById('lang-toggle-btn').textContent = currentLang === 'es' ? 'English' : 'Español';
+        }
+    </script>
 </head>
 <body class="bg-surface font-body text-on-surface antialiased">
     <!-- Header -->
@@ -95,16 +211,19 @@
         <div class="flex justify-between items-center w-full px-6 py-4 max-w-7xl mx-auto">
             <div class="flex items-center gap-3">
                 <span class="material-symbols-outlined text-primary">sensors</span>
-                <h1 class="text-lg font-bold text-primary tracking-tight">Guía de instalación</h1>
+                <h1 id="lang-title" class="text-lg font-bold text-primary tracking-tight">Guía de instalación</h1>
             </div>
-            <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX%20-%20Asimetrix/AX_Logo%20completo.png?width=174&height=56&name=AX_Logo%20completo.png" alt="Asimetrix" class="h-8">
+            <div class="flex items-center gap-4">
+                <button id="lang-toggle-btn" onclick="toggleLanguage()" class="px-4 py-2 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-container transition-colors">English</button>
+                <img src="https://campaigns.asimetrix.co/hs-fs/hubfs/AX%20-%20Asimetrix/AX_Logo%20completo.png?width=174&height=56&name=AX_Logo%20completo.png" alt="Asimetrix" class="h-8">
+            </div>
         </div>
     </header>
 
     <main class="pt-24 pb-24 md:pb-12 max-w-7xl mx-auto px-6">
         <a href="https://asimetrix-hub.vercel.app/#" class="inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors mb-6">
             <span class="material-symbols-outlined">arrow_back</span>
-            <span class="font-medium">Volver al Hub</span>
+            <span id="lang-back" class="font-medium">Volver al Hub</span>
         </a>
 
         <!-- Hero Section -->
@@ -115,7 +234,7 @@
                         <span class="material-symbols-outlined text-lg">visibility</span>
                         PigVision
                     </span>
-                    <p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed mb-2">
+                    <p id="lang-learn" class="text-on-surface-variant text-lg max-w-2xl leading-relaxed mb-2">
                         Aprende a instalar y configurar tu PigVision.
                     </p>
 
@@ -124,24 +243,24 @@
                         <button onclick="toggleImportant()" class="w-full flex items-center gap-3 p-4 text-left">
                             <span class="material-symbols-outlined text-error text-2xl">warning</span>
                             <div class="flex-1">
-                                <h4 class="font-bold text-error">Importante. Antes de iniciar, verifica estas condiciones con el área de tecnología</h4>
-                                <p class="text-on-surface-variant text-sm">Los equipos necesitan tener acceso a internet sin restricciones que bloqueen su comunicación.</p>
+                                <h4 id="lang-important" class="font-bold text-error">Importante. Antes de iniciar, verifica estas condiciones con el área de tecnología</h4>
+                                <p id="lang-importantSummary" class="text-on-surface-variant text-sm">Los equipos necesitan tener acceso a internet sin restricciones que bloqueen su comunicación.</p>
                             </div>
                             <span id="important-arrow" class="material-symbols-outlined text-error transition-transform duration-300">expand_more</span>
                         </button>
                         <div id="important-content" class="hidden px-4 pb-4">
                             <div class="border-t border-error-container/40 pt-4">
-                                <p class="text-on-surface-variant text-sm mb-3">En redes donde existen políticas de seguridad (firewall), es necesario permitir ciertas conexiones para que el sistema pueda: comunicarse con la plataforma, sincronizar información y mantenerse actualizado. Si estas configuraciones no están habilitadas, el sistema puede presentar fallas de conexión o funcionamiento.</p>
+                                <p id="lang-expandInfo" class="text-on-surface-variant text-sm mb-3">En redes donde existen políticas de seguridad (firewall), es necesario permitir ciertas conexiones para que el sistema pueda: comunicarse con la plataforma, sincronizar información y mantenerse actualizado. Si estas configuraciones no están habilitadas, el sistema puede presentar fallas de conexión o funcionamiento.</p>
                                 
-                                <h5 class="font-bold text-on-surface mb-2">Puertos requeridos</h5>
+                                <h5 id="lang-ports" class="font-bold text-on-surface mb-2">Puertos requeridos</h5>
                                 <ul class="text-on-surface-variant text-sm space-y-1 mb-3">
-                                    <li><strong>443 TCP</strong> - Necesario para la conexión a la VPN, acceso al terminal web y servicios HTTPS.</li>
-                                    <li><strong>123 UDP</strong> - Utilizado para la sincronización de hora mediante NTP.</li>
-                                    <li><strong>53 UDP</strong> - Utilizado para la resolución de nombres de dominio (DNS).</li>
+                                    <li id="lang-port443"><strong>443 TCP</strong> - Necesario para la conexión a la VPN, acceso al terminal web y servicios HTTPS.</li>
+                                    <li id="lang-port123"><strong>123 UDP</strong> - Utilizado para la sincronización de hora mediante NTP.</li>
+                                    <li id="lang-port53"><strong>53 UDP</strong> - Utilizado para la resolución de nombres de dominio (DNS).</li>
                                 </ul>
-                                <p class="text-xs text-on-surface-variant mb-3">Nota: Estos puertos deben estar habilitados para tráfico saliente (y permitir tráfico entrante únicamente como respuesta a conexiones iniciadas desde la red interna).</p>
+                                <p id="lang-portNote" class="text-xs text-on-surface-variant mb-3">Nota: Estos puertos deben estar habilitados para tráfico saliente (y permitir tráfico entrante únicamente como respuesta a conexiones iniciadas desde la red interna).</p>
                                 
-                                <h5 class="font-bold text-on-surface mb-2">Dominios que deben estar permitidos (whitelist)</h5>
+                                <h5 id="lang-whitelist" class="font-bold text-on-surface mb-2">Dominios que deben estar permitidos (whitelist)</h5>
                                 <div class="flex flex-wrap gap-2 mb-3">
                                     <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">*.balena-cloud.com</span>
                                     <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">*.docker.com</span>
@@ -149,7 +268,7 @@
                                     <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">*.asimetrix.co</span>
                                 </div>
                                 
-                                <h5 class="font-bold text-on-surface mb-2">Servidores de sincronización de tiempo (NTP – puerto 123 UDP)</h5>
+                                <h5 id="lang-ntp" class="font-bold text-on-surface mb-2">Servidores de sincronización de tiempo (NTP – puerto 123 UDP)</h5>
                                 <div class="flex flex-wrap gap-2 mb-3">
                                     <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">0.resinio.pool.ntp.org</span>
                                     <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">1.resinio.pool.ntp.org</span>
@@ -157,10 +276,10 @@
                                     <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">3.resinio.pool.ntp.org</span>
                                 </div>
                                 
-                                <h5 class="font-bold text-on-surface mb-2">DNS</h5>
-                                <p class="text-on-surface-variant text-sm mb-1">Se utiliza por defecto el servidor DNS público de Google:</p>
+                                <h5 id="lang-dns" class="font-bold text-on-surface mb-2">DNS</h5>
+                                <p id="lang-dnsText" class="text-on-surface-variant text-sm mb-1">Se utiliza por defecto el servidor DNS público de Google:</p>
                                 <span class="px-2 py-1 bg-surface-container-high rounded text-xs font-mono">8.8.8.8</span>
-                                <p class="text-xs text-on-surface-variant mt-1">(Adicional a los servidores DNS que tengan configurados internamente).</p>
+                                <p id="lang-dnsNote" class="text-xs text-on-surface-variant mt-1">(Adicional a los servidores DNS que tengan configurados internamente).</p>
                             </div>
                         </div>
                     </div>
@@ -173,17 +292,17 @@
                         }
                     </script>
 
-                    <p class="text-on-surface-variant text-base max-w-2xl leading-relaxed mb-2">
+                    <p id="lang-versions" class="text-on-surface-variant text-base max-w-2xl leading-relaxed mb-2">
                         Hemos creado 2 versiones para ti, elige la versión que se ajuste a tu forma de aprendizaje:
                     </p>
-                    <p class="text-on-surface-variant text-base mb-2">
+                    <p id="lang-option1" class="text-on-surface-variant text-base mb-2">
                         1. Video, donde Jhony nos muestra el proceso
                     </p>
                     <a href="https://www.youtube.com/watch?v=nQvPDQrr3sI&t=2s" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-colors shadow-lg shadow-red-600/30 mb-6">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                        Ver video
+                        <span id="lang-watch">Ver video</span>
                     </a>
-                    <p class="text-on-surface-variant text-base mb-4">
+                    <p id="lang-option2" class="text-on-surface-variant text-base mb-4">
                         2. El siguiente paso a paso descriptivo. Da clic en cada uno
                     </p>
                 </div>
@@ -200,37 +319,37 @@
                     <div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
                         <span class="material-symbols-outlined text-primary text-2xl">inventory_2</span>
                     </div>
-                    <h5 class="font-bold text-on-surface mb-2">Componentes</h5>
-                    <p class="text-xs text-on-surface-variant">Conoce las partes y herramientas</p>
+                    <h5 id="lang-components" class="font-bold text-on-surface mb-2">Componentes</h5>
+                    <p id="lang-componentsDesc" class="text-xs text-on-surface-variant">Conoce las partes y herramientas</p>
                 </a>
                 <a href="instalacion.html" class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border-t-4 border-primary-container hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
                         <span class="material-symbols-outlined text-primary text-2xl">build</span>
                     </div>
-                    <h5 class="font-bold text-on-surface mb-2">Instalación</h5>
-                    <p class="text-xs text-on-surface-variant">Instala en tu granja</p>
+                    <h5 id="lang-install" class="font-bold text-on-surface mb-2">Instalación</h5>
+                    <p id="lang-installDesc" class="text-xs text-on-surface-variant">Instala en tu granja</p>
                 </a>
                 <a href="configuracion.html" class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border-t-4 border-primary-container hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-4">
                         <span class="material-symbols-outlined text-primary text-2xl">settings</span>
                     </div>
-                    <h5 class="font-bold text-on-surface mb-2">Configuración</h5>
-                    <p class="text-xs text-on-surface-variant">Configura WiFi y lote</p>
+                    <h5 id="lang-config" class="font-bold text-on-surface mb-2">Configuración</h5>
+                    <p id="lang-configDesc" class="text-xs text-on-surface-variant">Configura WiFi y lote</p>
                 </a>
                 <a href="mantenimiento.html" class="bg-surface-container-lowest rounded-xl p-6 shadow-sm border-t-4 border-primary hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                         <span class="material-symbols-outlined text-primary text-2xl">handyman</span>
                     </div>
-                    <h5 class="font-bold text-on-surface mb-2">Mantenimiento</h5>
-                    <p class="text-xs text-on-surface-variant">Cuida tu PigVision</p>
+                    <h5 id="lang-maintenance" class="font-bold text-on-surface mb-2">Mantenimiento</h5>
+                    <p id="lang-maintenanceDesc" class="text-xs text-on-surface-variant">Cuida tu PigVision</p>
                 </a>
             </div>
         </section>
 
         <!-- Contact Section -->
         <section class="bg-surface-container-low rounded-xl p-8 md:p-12">
-            <h4 class="text-primary text-2xl font-bold mb-6 text-center">¿Necesitas ayuda?</h4>
-            <p class="text-on-surface-variant text-center mb-8">Contacta a nuestro equipo de soporte</p>
+            <h4 id="lang-needHelp" class="text-primary text-2xl font-bold mb-6 text-center">¿Necesitas ayuda?</h4>
+            <p id="lang-contactSupport" class="text-on-surface-variant text-center mb-8">Contacta a nuestro equipo de soporte</p>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                 <div class="bg-surface-container-lowest p-6 rounded-xl text-center">
                     <div class="w-16 h-16 bg-primary-container rounded-full flex items-center justify-center mx-auto mb-4">
