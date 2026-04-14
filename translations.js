@@ -1,0 +1,197 @@
+const translations = {
+    es: {
+        componentsTitle: "Guía de componentes",
+        backToHome: "Volver al inicio",
+        badge: "PigVision",
+        componentsHero: "Componentes del kit",
+        componentsHeroDesc: "Todo lo que necesitas para instalar tu PigVision correctamente.",
+        partsTitle: "Partes",
+        pigvisionComponents: "Componentes de PigVision",
+        controlPanel: "Panel de Control",
+        ledIndicators: "Indicadores LED",
+        serialNumber: "Número de Serie",
+        serialDesc: "Ubicado en la parte inferior del dispositivo",
+        additionalTools: "Herramientas adicionales",
+        toolsDesc: "Herramientas que necesitarás para la instalación:",
+        technicalSpec: "Especificaciones técnicas",
+        powerSource: "Fuente de alimentación",
+        battery: "Batería",
+        batteryType: "Tipo: Ion de litio 3.7V",
+        batteryCapacity: "Capacidad: 2600 mAh",
+        batteryAutonomy: "Autonomía: 30 minutos",
+        mechanics: "Mecánica",
+        dimensions: "Dimensiones: 213 x 185 x 138 mm",
+        weight: "Peso: 1700 gr",
+        tempRange: "Temp: 0° a 50° Celsius",
+        connectivity: "Conectividad",
+        wifi: "WiFi 2.4 GHz",
+        ready: "¿Todo listo?",
+        startInstall: "Comienza con la instalación de tu PigVision",
+        goToInstall: "Ir a Instalación",
+        
+        installTitle: "Guía de instalación",
+        installHero: "Instalación",
+        installHeroDesc: "Aprende a instalar tu PigVision siguiendo los pasos a continuación.",
+        importantNote: "Para tener en cuenta",
+        distanceFeeder: "Debes instalar la PigVision al menos a 1 metro | 3.28 pies de distancia del comedero.",
+        minHeight: "Asegúrate que la distancia mínima entre el suelo y el lente sea de 2.30 mts | 7.5 pies.",
+        ceilingHigh: "Instalación para techos con altura mayor a 2.50 m | 8.2 ft",
+        ceilingLow: "Instalación para techos con altura menor a 2.30 m | 7.5 ft",
+        requiredComponents: "Componentes necesarios",
+        step: "Paso",
+        installComplete: "¿Instalación completa?",
+        nowConfigure: "Ahora aprende a configurar tu PigVision",
+        goToConfig: "Ir a Configuración",
+        
+        configTitle: "Guía de configuración",
+        configHero: "Configuración",
+        configInfoTitle: "Para este proceso, te recomendamos tener disponible la siguiente información:",
+        configInfo: "Distancia entre el piso y el lente de PigVision",
+        lotData: "Datos del lote (fecha de inicio, edad inicial, ID de lote, sexo, número inicial de animales)",
+        wifiConfig: "Configura la PigVision a tu WiFi",
+        lotConfig: "Configura PigVision para tu primer lote",
+        troubleshooting: "Solución de problemas",
+        ledIssue: "Si los LED no funcionan correctamente, apaga la cámara, desconéctala durante 5 minutos y vuelve a conectarla.",
+        ledImportant: "Importante: El apagado y la desconexión por 5 minutos son indispensables.",
+        configComplete: "¿Configuración completa?",
+        nowMaintenance: "Aprende cómo hacer el mantenimiento de tu PigVision",
+        goToMaintenance: "Ir a Mantenimiento",
+        
+        maintTitle: "Guía de mantenimiento",
+        maintHero: "Mantenimiento",
+        maintHeroDesc: "Aprende a mantener tu PigVision en óptimas condiciones siguiendo estas recomendaciones.",
+        cleaning: "Limpieza de dispositivos",
+        cleaningDesc: "El responsable de la granja debe limpiar cada uno según las indicaciones:",
+        cleaning1: "Utiliza un pano hmedo y luego un pano seco para limpiar la lente o nuestro Stick de Limpieza de Visin.",
+        cleaning2: "Limpia cada 15 das.",
+        cleaning3: "Usa un cepillo para eliminar el polvo del disipador de calor. Limpia cada lote.",
+        review: "Revisin del dispositivo",
+        review1: "Verifica que est conectado a la fuente de alimentacin.",
+        review2: "El LED de ENCENDIDO (ON) debe permanecer en amarillo y el LED de ESTADO (STATUS) debe permanecer en verde.",
+        review3: "Si el LED de ESTADO (STATUS) permanece en rojo, contacta a un asesor.",
+        suggestions: "Sugerencias clave",
+        suggestion1: "Siempre realiza los pasos anteriores 5 das antes de la llegada del nuevo lote.",
+        suggestion2: "Los dispositivos no deben colgarse de la lnea de gas ni golpearse con superficies duras.",
+        suggestion3: "No se debe conectar ningn otro equipo a los enchufes del dispositivo Smart Farm.",
+        suggestion4: "El dispositivo no debe recibir agua directamente.",
+        contactUs: "Contctanos",
+        
+        needHelp: "Necesitas ayuda?",
+        contactSupport: "Contacta a nuestro equipo de soporte"
+    },
+    en: {
+        componentsTitle: "Components Guide",
+        backToHome: "Back to home",
+        badge: "PigVision",
+        componentsHero: "Kit Components",
+        componentsHeroDesc: "Everything you need to install your PigVision correctly.",
+        partsTitle: "Parts",
+        pigvisionComponents: "PigVision Components",
+        controlPanel: "Control Panel",
+        ledIndicators: "LED Indicators",
+        serialNumber: "Serial Number",
+        serialDesc: "Located on the bottom of the device",
+        additionalTools: "Additional Tools",
+        toolsDesc: "Tools you will need for installation:",
+        technicalSpec: "Technical Specifications",
+        powerSource: "Power Supply",
+        battery: "Battery",
+        batteryType: "Type: Lithium ion 3.7V",
+        batteryCapacity: "Capacity: 2600 mAh",
+        batteryAutonomy: "Autonomy: 30 minutes",
+        mechanics: "Mechanics",
+        dimensions: "Dimensions: 213 x 185 x 138 mm",
+        weight: "Weight: 1700 gr",
+        tempRange: "Temp: 0 to 50 Celsius",
+        connectivity: "Connectivity",
+        wifi: "WiFi 2.4 GHz",
+        ready: "All ready?",
+        startInstall: "Start with the installation of your PigVision",
+        goToInstall: "Go to Installation",
+        
+        installTitle: "Installation Guide",
+        installHero: "Installation",
+        installHeroDesc: "Learn to install your PigVision by following the steps below.",
+        importantNote: "Keep in mind",
+        distanceFeeder: "You must install PigVision at least 1 meter | 3.28 feet from the feeder.",
+        minHeight: "Make sure the minimum distance between the floor and the lens is 2.30 mts | 7.5 feet.",
+        ceilingHigh: "Installation for ceilings with height greater than 2.50 m | 8.2 ft",
+        ceilingLow: "Installation for ceilings with height less than 2.30 m | 7.5 ft",
+        requiredComponents: "Required components",
+        step: "Step",
+        installComplete: "Installation complete?",
+        nowConfigure: "Now learn to configure your PigVision",
+        goToConfig: "Go to Configuration",
+        
+        configTitle: "Configuration Guide",
+        configHero: "Configuration",
+        configInfoTitle: "For this process, we recommend having the following information available:",
+        configInfo: "Distance between the floor and the PigVision lens",
+        lotData: "Lot data (start date, initial age, lot ID, sex, initial number of animals)",
+        wifiConfig: "Configure PigVision to your WiFi",
+        lotConfig: "Configure PigVision for your first lot",
+        troubleshooting: "Troubleshooting",
+        ledIssue: "If the LEDs do not work correctly, turn off the camera, disconnect it for 5 minutes and reconnect it.",
+        ledImportant: "Important: The shutdown and disconnection for 5 minutes are essential.",
+        configComplete: "Configuration complete?",
+        nowMaintenance: "Learn how to maintain your PigVision",
+        goToMaintenance: "Go to Maintenance",
+        
+        maintTitle: "Maintenance Guide",
+        maintHero: "Maintenance",
+        maintHeroDesc: "Learn to keep your PigVision in optimal conditions by following these recommendations.",
+        cleaning: "Device Cleaning",
+        cleaningDesc: "The farm responsible must clean each one according to the instructions:",
+        cleaning1: "Use a damp cloth and then a dry cloth to clean the lens or our Vision Cleaning Stick.",
+        cleaning2: "Clean every 15 days.",
+        cleaning3: "Use a brush to remove dust from the heat sink. Clean every lot.",
+        review: "Device Review",
+        review1: "Verify that it is connected to the power supply.",
+        review2: "The ON LED should stay yellow and the STATUS LED should stay green.",
+        review3: "If the STATUS LED stays red, contact an advisor.",
+        suggestions: "Key Suggestions",
+        suggestion1: "Always perform the above steps 5 days before the arrival of the new lot.",
+        suggestion2: "Devices should not be hung from the gas line or hit against hard surfaces.",
+        suggestion3: "No other equipment should be connected to the Smart Farm device sockets.",
+        suggestion4: "The device should not receive water directly.",
+        contactUs: "Contact Us",
+        
+        needHelp: "Need help?",
+        contactSupport: "Contact our support team"
+    }
+};
+
+let currentLang = 'es';
+
+function toggleLanguage() {
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    updateContent();
+    document.getElementById('lang-toggle-btn').textContent = currentLang === 'es' ? 'English' : 'Español';
+}
+
+function updateContent() {
+    const t = translations[currentLang];
+    const ids = [
+        'lang-title', 'lang-back', 'lang-badge', 'lang-hero', 'lang-hero-desc',
+        'lang-parts', 'lang-pigvision-comp', 'lang-control', 'lang-led', 'lang-serial', 'lang-serial-desc',
+        'lang-tools', 'lang-tools-desc', 'lang-specs', 'lang-power', 'lang-battery', 'lang-battery-type',
+        'lang-battery-cap', 'lang-battery-auto', 'lang-mech', 'lang-dim', 'lang-weight', 'lang-temp',
+        'lang-connect', 'lang-wifi', 'lang-ready', 'lang-start', 'lang-go-install',
+        'lang-important', 'lang-dist1', 'lang-dist2', 'lang-ceiling1', 'lang-ceiling2',
+        'lang-req-comp', 'lang-install-complete', 'lang-now-config', 'lang-go-config',
+        'lang-config-title', 'lang-config-hero', 'lang-config-info', 'lang-config-lot',
+        'lang-wifi-config', 'lang-lot-config', 'lang-troubleshoot', 'lang-led-issue', 'lang-led-imp',
+        'lang-complete', 'lang-now-maint', 'lang-go-maint',
+        'lang-maint-hero', 'lang-maint-desc', 'lang-cleaning', 'lang-clean-desc',
+        'lang-clean-1', 'lang-clean-2', 'lang-clean-3', 'lang-review', 'lang-review-1', 'lang-review-2', 'lang-review-3',
+        'lang-suggest', 'lang-sugg-1', 'lang-sugg-2', 'lang-sugg-3', 'lang-sugg-4', 'lang-contact'
+    ];
+    
+    // This function looks for elements with data-translation attributes
+    document.querySelectorAll('[data-translation]').forEach(el => {
+        const key = el.getAttribute('data-translation');
+        if (t[key]) {
+            el.textContent = t[key];
+        }
+    });
+}
