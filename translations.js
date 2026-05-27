@@ -172,7 +172,7 @@ function toggleLanguage() {
 function updateContent() {
     const t = translations[currentLang];
     const ids = [
-        'lang-title', 'lang-back', 'lang-badge', 'lang-hero', 'lang-hero-desc',
+        'lang-title', 'lang-badge', 'lang-hero', 'lang-hero-desc',
         'lang-parts', 'lang-pigvision-comp', 'lang-control', 'lang-led', 'lang-serial', 'lang-serial-desc',
         'lang-tools', 'lang-tools-desc', 'lang-specs', 'lang-power', 'lang-battery', 'lang-battery-type',
         'lang-battery-cap', 'lang-battery-auto', 'lang-mech', 'lang-dim', 'lang-weight', 'lang-temp',

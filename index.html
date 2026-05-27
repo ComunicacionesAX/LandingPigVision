@@ -92,7 +92,6 @@
         const translations = {
             es: {
                 title: "Guía de instalación",
-                backToHub: "Volver al Hub",
                 badge: "PigVision",
                 learnText: "Aprende a instalar y configurar tu PigVision.",
                 versionsText: "Hemos creado 2 versiones para ti, elige la versión que se ajuste a tu forma de aprendizaje:",
@@ -125,7 +124,6 @@
             },
             en: {
                 title: "Installation Guide",
-                backToHub: "Back to Hub",
                 badge: "PigVision",
                 learnText: "Learn to install and configure your PigVision.",
                 versionsText: "We have created 2 versions for you, choose the version that fits your learning style:",
@@ -169,7 +167,6 @@
             const t = translations[currentLang];
             
             document.getElementById('lang-title').textContent = t.title;
-            document.getElementById('lang-back').textContent = t.backToHub;
             document.getElementById('lang-learn').textContent = t.learnText;
             document.getElementById('lang-versions').textContent = t.versionsText;
             document.getElementById('lang-option1').textContent = t.option1;
@@ -219,11 +216,6 @@
     </header>
 
     <main class="pt-24 pb-24 md:pb-12 max-w-7xl mx-auto px-6">
-        <a href="https://asimetrix-hub.vercel.app/#" class="inline-flex items-center gap-2 text-primary hover:text-primary-container transition-colors mb-6">
-            <span class="material-symbols-outlined">arrow_back</span>
-            <span id="lang-back" class="font-medium">Volver al Hub</span>
-        </a>
-
         <!-- Hero Section -->
         <section class="mb-8">
             <div class="flex flex-col lg:flex-row gap-8 items-center">
