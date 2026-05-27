@@ -166,7 +166,7 @@ let currentLang = 'es';
 function toggleLanguage() {
     currentLang = currentLang === 'es' ? 'en' : 'es';
     updateContent();
-    document.getElementById('lang-toggle-btn').textContent = currentLang === 'es' ? 'English' : 'Español';
+    document.getElementById('lang-toggle-btn').textContent = currentLang === 'es' ? 'ES' : 'EN';
 }
 
 function updateContent() {
